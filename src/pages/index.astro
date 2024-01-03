@@ -3,15 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import SocialStack from "../components/SocialStack.astro";
 import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/Section.astro";
 
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import GmailIcon from "../components/icons/Gmail.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
-<Layout title="cmendoza Portfolio - Backend Developer" description="Backend Developer and Systems Engineer. Originally from Bogota, Colombia. I specialize in creating Web Solutions.">
+<Layout
+  title="cmendoza Portfolio - Backend Developer"
+  description="Backend Developer and Systems Engineer. Originally from Bogota, Colombia. I specialize in creating Web Solutions."
+>
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-32">
+    <SectionContainer class="py-40">
       <img
         class="rounded-full size-12 mb-4"
         src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg"
@@ -23,7 +28,7 @@ import GmailIcon from "../components/icons/Gmail.astro";
           <Badge>Available to work</Badge>
         </div>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-2xl opacity-80 text-pretty">
         <span>+1 year of experience.</span>
         <span class="text-violet-200/90"
           >Backend Developer and Systems Engineer.
@@ -40,11 +45,17 @@ import GmailIcon from "../components/icons/Gmail.astro";
         <SocialStack href="https://github.com/AndresMGdev">
           <GithubIcon class="size-6" /> Github
         </SocialStack>
-		<SocialStack>
-			<GmailIcon class="size-6" /> cmendoza022002@gmail.com
-		  </SocialStack>
+        <SocialStack>
+          <GmailIcon class="size-6" /> cmendoza022002@gmail.com
+        </SocialStack>
       </nav>
-    </section>
-	<!-- <Experience /> -->
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" /> 
+        Work Experience
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
