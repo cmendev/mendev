@@ -1,12 +1,28 @@
 ---
+import Java from "./icons/tecnologies/Java.astro";
+import Spring from "./icons/tecnologies/Spring.astro";
+
+const TAGS = {
+    JAVA: {
+        name: "Java",
+        class: "text-orange-500/80 bg-white",
+        icon: Java
+    },
+    SPRING: {
+        name: "Spring",
+        class: "text-[#6cb43c] bg-white",
+        icon: Spring
+    },
+}
+
 const PROJECTS = [
     {
         title: 'Project 1',
-        description: 'Lorem ipsum',
+        description: 'Lorem ipsum oakapokaops akajhia sijpasj aoaoa ak oasjp aoisjpa piaisjj apcpodpa apoaospa ampaosj iasnisak amopaokokapok oiaojdpoa oinaoiap ampjajspa apacapa',
         link: '#',
         github: '#',
         image: "https://via.placeholder.com/300x200",
-        tags: ['Java', 'Kafka', 'SpringBoot']
+        tags: [TAGS.JAVA, TAGS.SPRING]
     }
 ]
 ---
@@ -14,16 +30,20 @@ const PROJECTS = [
 {
     PROJECTS.map((project) => (
         <article>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <ul>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{project.title}</h3>
+            <p class="text-lg mb-4 text-pretty">{project.description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2">
                 {
                     project.tags.map((tag) => (
-                        <li>{tag}</li>
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs items-center ${tag.class} py-1 px-2`}>
+                                <tag.icon class="size-7" /> {tag.name}
+                            </span>
+                        </li>
                     ))
                 }
             </ul>  
-            <img src={project.image} alt={`Screenshot project ${project.title}`} />  
+            <img class="rounded shadow-2xl shadow-white/10" src={project.image} alt={`Screenshot project ${project.title}`} />  
         </article>
     ))
 }
