@@ -18,7 +18,7 @@ import CodeIcon from "../components/icons/Code.astro";
   description="Backend Developer and Systems Engineer. Originally from Bogota, Colombia. I specialize in creating Web Solutions."
 >
   <main>
-    <SectionContainer class="py-36 pb-32">
+    <SectionContainer class="py-36 sm:py-24 md:py-36" id="home">
       <img
         class="rounded-full size-12 mb-4"
         src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg"
@@ -30,13 +30,13 @@ import CodeIcon from "../components/icons/Code.astro";
           <Badge>Available to work</Badge>
         </div>
       </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-pretty max-w-[700px]">
-        <span>+1 year of experience.</span>
+      <h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]">
+        <span class="text-white/80">+1 year of experience.</span>
         <span class="text-violet-200/90"
           >Backend Developer and Systems Engineer.
         </span>
         <span class="text-red-200/90">Originally from Bogota, Colombia.</span>
-        <span class="opacity-75">I specialize in creating Web Solutions.</span>
+        <span class="text-white/80">I specialize in creating Web Solutions.</span>
       </h2>
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialStack
@@ -52,14 +52,14 @@ import CodeIcon from "../components/icons/Code.astro";
         </SocialStack>
       </nav>
     </SectionContainer>
-    <SectionContainer id="experience">
+    <SectionContainer class="py-24" id="experience">
       <h2 class="text-xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <BriefcaseIcon class="size-7" /> 
         Work Experience
       </h2>
       <Experience />
     </SectionContainer>
-    <SectionContainer id="projects">
+    <SectionContainer class="py-24" id="projects">
       <h2 class="text-xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" /> 
         Projects

@@ -1,3 +1,10 @@
-<section id={Astro.props.id} class={`${Astro.props.class} w-full lg:w-[740px] mx-auto pb-24`}>
+<section id={Astro.props.id} class={`${Astro.props.class} w-[270px] mx-auto sm:w-[400px] md:w-[600px] lg:w-[740px] mg:mx-8 lg:mx-auto pb-24 lg:px-8`}>
     <slot />
 </section>
+<style>
+    @media (max-width: 640px;) {
+        section {
+            max-width: 300px;
+        }
+    }
+</style>
