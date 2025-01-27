@@ -11,44 +11,67 @@ import GithubIcon from "../components/icons/Github.astro";
 import GmailIcon from "../components/icons/Gmail.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
+import FolderOpen from "../components/icons/FolderOpen.astro";
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout
-  title="cmendoza Portfolio - Backend Developer"
+  title="Mendev Portfolio - Backend Developer"
   description="Backend Developer and Systems Engineer. Originally from Bogota, Colombia. I specialize in creating Web Solutions."
 >
+<style>
+  @keyframes color-change {
+  0%, 100% {
+    color: rgba(221, 214, 254, 0.9); /* Violet */
+  }
+  25% {
+    color: rgba(254, 202, 202, 0.9); /* Red */
+  }
+  50% {
+    color: rgba(191, 219, 254, 0.9); /* Sky */
+  }
+  75% {
+    color: rgba(254, 240, 138, 0.9); /* Yellow */
+  }
+}
+
+.color-animated {
+  animation: color-change 3s infinite;
+}
+
+</style>
   <main>
     <SectionContainer class="py-36 sm:py-24 md:py-36" id="home">
       <img
         class="rounded-full size-12 mb-4"
-        src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg"
-        alt="cmendozadev icon"
+        src="/me.png"
+        alt="Mendev icon"
       />
       <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-8">
-        Hey, I'm cmendoza
+        Hey, I'm <span class="color-animated">Mendev</span>
         <div class="flex justify-center items-center">
           <Badge>Available to work</Badge>
         </div>
       </h1>
       <h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]">
-        <span class="text-white/80">+1 year of experience.</span>
+        <span class="text-white/80">Backend Developer and Systems Engineer</span>
         <span class="text-violet-200/90"
-          >Backend Developer and Systems Engineer.
+          >with +1 year of experience designing and implementing scalable web solutions.
         </span>
-        <span class="text-red-200/90">Originally from Bogota, Colombia.</span>
-        <span class="text-white/80">I specialize in creating Web Solutions.</span>
+        <span class="text-red-200/90">Based in Bogotá, Colombia.</span>
+        <span class="text-white/80">I specialize in creating efficient backend systems and optimizing performance to deliver innovative digital products tailored to client needs.</span>
       </h2>
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialStack
-          href="https://www.linkedin.com/in/carlos-andr%C3%A9s-mendoza-g%C3%B3mez-149594204/"
+          href="https://www.linkedin.com/in/cmendoza02/"
         >
-          <LinkedInIcon class="size-4 md:size-6" /> LinkedIn
+          <LinkedInIcon class="size-7" />
         </SocialStack>
         <SocialStack href="https://github.com/AndresMGdev">
-          <GithubIcon class="size-4 md:size-6" /> Github
+          <GithubIcon class="size-7" />
         </SocialStack>
         <SocialStack href="mailto:cmendoza022002@gmail.com">
-          <GmailIcon class="size-4 md:size-6" /> cmendoza022002@gmail.com
+          <GmailIcon class="size-7" />
         </SocialStack>
       </nav>
     </SectionContainer>
@@ -62,6 +85,13 @@ import CodeIcon from "../components/icons/Code.astro";
     <SectionContainer class="py-24" id="projects">
       <h2 class="text-xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" /> 
+        Skills
+      </h2>
+      <Skills />
+    </SectionContainer>
+    <SectionContainer class="py-24" id="projects">
+      <h2 class="text-xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <FolderOpen class="size-7" /> 
         Projects
       </h2>
       <Projects />

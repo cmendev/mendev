@@ -1,36 +1,33 @@
 ---
+
+
 export const MENU = [
-    {
-        name: "Home",
-        tag: "#home"
-    },
-    {
-        name: "Experience",
-        tag: "#experience"
-    },
-    {
-        name: "Projects",
-        tag: "#projects"
-    },
-    {
-        name: "About",
-        tag: "#about"
-    },
-    {
-        name: "Contact",
-        tag: "#contact"
-    },
-]
+  {
+    name: "Home",
+    tag: "/",
+  },
+  {
+    name: "Experience",
+    tag: "#experience",
+  },
+  {
+    name: "Projects",
+    tag: "#projects",
+  },
+  {
+    name: "About",
+    tag: "/about",
+  },
+  {
+    name: "Contact",
+    tag: "/contact",
+  },
+];
 ---
-<!-- <header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"> --><!-- <nav class="flex flex-row md:gap-2 lg:gap-x-10 opacity-80">
-        <a href="/">Home</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav> -->
-    <!-- </header> -->
-<nav class="fixed sm:static md:flex md:justify-center md:items-center">
+
+<nav
+  class="fixed sm:static md:flex md:justify-center md:items-center max-sm:w-[100%]"
+>
   <div
     class="flex flex-wrap items-center lg:justify-center sm:justify-between mx-auto sm:w-[480px] md:w-[600px] lg:w-[740px] p-4"
   >
@@ -56,24 +53,27 @@ export const MENU = [
           d="M1 1h15M1 7h15M1 13h15"></path>
       </svg>
     </button>
-    <div class="hidden border border-gray-200/10 rounded-lg w-full sm:block md:w-auto bg-black z-50" id="menu-toggle">
+    <div
+      class="hidden border border-white/5 rounded-lg w-full sm:block md:w-auto max-sm:backdrop-blur-lg z-50 max-sm:h-[30%] max-sm:w-[100%]"
+      id="menu-toggle"
+    >
       <ul
-        class="font-medium flex flex-col sm:flex-row items-center md:space-x-8 rtl:space-x-reverse"
+        class="font-medium flex flex-col sm:flex-row sm:justify-around items-center md:space-x-8 rtl:space-x-reverse max-sm:text-white"
       >
-      {
-
-        MENU.map(menu => (
-        <li class="m-0">
-          <a
-            href={menu.tag}
-            class="block py-2 px-3 hover:text-sky-200/90"
-            aria-current="page">{menu.name}</a>
-        </li>
-        ))
-        
-    }
+        {
+          MENU.map((menu) => (
+            <li class="m-0">
+              <a
+                href={menu.tag}
+                class="block py-2 px-3 hover:text-sky-200/90"
+                aria-current="page"
+              >
+                {menu.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
 </nav>
-

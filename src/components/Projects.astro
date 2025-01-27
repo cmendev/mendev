@@ -1,49 +1,81 @@
 ---
-import Java from "./icons/tecnologies/Java.astro";
-import Spring from "./icons/tecnologies/Spring.astro";
+import SocialStack from "../components/SocialStack.astro";
+import { TAGS } from '../data/tags';
 
-const TAGS = {
-    JAVA: {
-        name: "Java",
-        class: "text-orange-500/80 bg-white",
-        icon: Java
-    },
-    SPRING: {
-        name: "Spring",
-        class: "text-[#6cb43c] bg-white",
-        icon: Spring
-    },
-}
+import GithubIcon from "../components/icons/Github.astro";
+import DemoIcon from "../components/icons/Demo.astro";
+
+
 
 const PROJECTS = [
-    {
-        title: 'Project 1',
-        description: 'Lorem ipsum oakapokaops akajhia sijpasj aoaoa ak oasjp aoisjpa piaisjj apcpodpa apoaospa ampaosj iasnisak amopaokokapok oiaojdpoa oinaoiap ampjajspa apacapa',
-        link: '#',
-        github: '#',
-        image: "https://via.placeholder.com/300x200",
-        tags: [TAGS.JAVA, TAGS.SPRING]
-    }
-]
+  {
+    title: "Encrypt",
+    description:
+      "Creé el encriptador como un reto y una forma interactiva de aprendizaje. Este desafío me resultó apasionante, ya que lo integré con una de mis tecnologías favoritas: React.",
+    link: "https://andresmgdev.github.io/encrypt/",
+    github: "#", // Reemplázalo con el link al repositorio si está disponible
+    image: "/encrypt.png",
+    tags: [TAGS.JAVASCRIPT, TAGS.REACT, TAGS.CSS, TAGS.HTML],
+  },
+  {
+    title: "ProStock",
+    description:
+      "Desarrollado para la gestión de inventario, este proyecto incluye secciones clave como Inicio, Productos, Perfil, Iniciar sesión y Registrarse, facilitando una navegación fluida en la aplicación construida con Next.js v14 y estilizada con Tailwind CSS.",
+    link: "https://prostock.vercel.app/",
+    github: "#", // Reemplázalo con el link al repositorio si está disponible
+    image: "/prostock.png",
+    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS],
+  },
+  {
+    title: "Agriweigh",
+    description:
+      "Aplicación web para gestionar el peso del ganado, caballos y cerdos, permitiendo registrar y visualizar datos importantes como edad, código, longitud, circunferencia torácica y el calculo del peso estimado de las vacas, y descargar un informe pdf. Facilita tomar el peso sin bascula para los pequeños ganaderos.",
+    link: "https://agriweigh-latest.onrender.com/",
+    github: "#", // Reemplázalo con el link al repositorio si está disponible
+    image: "/agriweigh.png",
+    tags: [
+      TAGS.JAVA,
+      TAGS.SPRING,
+      TAGS.THYMELEAF,
+      TAGS.TAILWINDCSS,
+    ],
+  },
+];
 ---
 
-{
+<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+  {
     PROJECTS.map((project) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{project.title}</h3>
-            <p class="text-lg mb-4 text-pretty">{project.description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {
-                    project.tags.map((tag) => (
-                        <li>
-                            <span class={`flex gap-x-2 rounded-full text-xs items-center ${tag.class} py-1 px-2`}>
-                                <tag.icon class="size-7" /> {tag.name}
-                            </span>
-                        </li>
-                    ))
-                }
-            </ul>  
-            <img class="rounded shadow-2xl shadow-white/10" src={project.image} alt={`Screenshot project ${project.title}`} />  
-        </article>
+      <article class="border border-white/10 p-4 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+          {project.title}
+        </h3>
+        <img
+          class="rounded shadow-white/10"
+          src={project.image}
+          alt={`Screenshot project ${project.title}`}
+        />
+        <p class="text-lg mb-4 text-pretty">{project.description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+          {project.tags.map((tag) => (
+            <li>
+              <span
+                class={`rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 bg-white/5 hover:scale-110 hover:bg-white/30 text-xs md:text-base transition ${tag.class}`}
+              >
+                <tag.icon class="size-7" />
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex gap-4">
+          <SocialStack href={project.github}>
+            <GithubIcon class="size-7" />
+          </SocialStack>
+          <SocialStack href={project.link}>
+            <DemoIcon class="size-7" />
+          </SocialStack>
+        </div>
+      </article>
     ))
-}
+  }
+</div>
