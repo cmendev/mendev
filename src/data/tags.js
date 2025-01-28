@@ -8,7 +8,7 @@ import TypeScript from "../components/icons/technologies/TypeScript.astro";
 import Nextjs from "../components/icons/technologies/Nextjs.astro";
 import TailwindCSS from "../components/icons/technologies/TailwindCSS.astro";
 import Thymeleaf from "../components/icons/technologies/Thymeleaf.astro";
-import Git from "../components/icons/technologies/Git.astro"; // Asegúrate de tener este archivo
+import Git from "../components/icons/technologies/Git.astro";
 
 export const TAGS = {
   JAVASCRIPT: {
