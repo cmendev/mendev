@@ -1,54 +1,100 @@
-# Astro Starter Kit: Basics
+# Mendev Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Bienvenido al repositorio de **Mendev**, mi portafolio profesional desarrollado con **Astro**. Este proyecto presenta mis habilidades, experiencia y proyectos destacados en un diseño moderno y eficiente.
 
 ![just-the-basics](public/image.png)
 
-## 🚀 Project Structure
+## 🌟 Características
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Desarrollo con Astro**: Aprovecha la rapidez y simplicidad de Astro para sitios web estáticos.
+- **Componentización**: Uso de componentes reutilizables para mejorar la mantenibilidad del código.
+- **Optimización de rendimiento**: Carga rápida y eficiente para una mejor experiencia de usuario.
+- **Estilos modernos**: Diseño atractivo con Tailwind CSS.
+- **Sección de proyectos**: Muestra mis principales trabajos con enlaces y descripciones detalladas.
+- **Adaptabilidad**: Diseño responsivo para una óptima visualización en distintos dispositivos.
+- **Formulario de contacto con Formspree**: Permite enviar mensajes de manera sencilla.
+
+## 🚀 Instalación y Uso
+
+Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
+
+### 1️⃣ Clonar el Repositorio
+
+```sh
+ git clone https://github.com/AndresMGdev/mendev.git
+ cd mendev
+```
+
+### 2️⃣ Instalar Dependencias
+
+```sh
+ npm install
+```
+
+### 3️⃣ Ejecutar en Modo Desarrollo
+
+```sh
+ npm run dev
+```
+
+*El servidor iniciará en* `http://localhost:4321`
+
+### 4️⃣ Construcción para Producción
+
+```sh
+ npm run build
+```
+
+*Generará los archivos optimizados en la carpeta **`dist/`**.*
+
+### 5️⃣ Vista Previa de la Construcción
+
+```sh
+ npm run preview
+```
+
+## 📂 Estructura del Proyecto
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── assets/ (Imágenes y archivos estáticos)
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/ (Componentes reutilizables)
+│   ├── layouts/ (Plantillas de diseño)
+│   ├── pages/ (Páginas principales)
+│   ├── styles/ (Estilos personalizados)
+│   ├── data/
+│   │   ├── projects.js (Listado de proyectos)
+│   │   ├── tags.js (Etiquetas para clasificar tecnologías)
+│   │   ├── experience.js (Experiencia laboral)
+│   └── sections/
+│       ├── Hero.astro (Sección principal de presentación)
+│       ├── About.astro (Sección de información sobre mí)
+└── package.json (Configuración del proyecto)
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📌 Tecnologías Utilizadas
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Astro** - Framework principal
+- **Tailwind CSS** - Estilización moderna y eficiente
+- **JavaScript** - Lógica e interactividad
+- **Markdown** - Creación de contenido estático
+- **Formspree** - Manejo de formularios de contacto
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 📜 Licencia
 
-## 🧞 Commands
+Este proyecto está bajo la licencia **MIT**. Puedes usarlo, modificarlo y distribuirlo libremente.
 
-All commands are run from the root of the project, from a terminal:
+## 📞 Contacto
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Si tienes preguntas, sugerencias o simplemente quieres conectar conmigo, puedes encontrarme en:
 
-## 👀 Want to learn more?
+- **LinkedIn**: [Tu perfil](#)
+- **Twitter**: [Tu usuario](#)
+- **Correo**: [Tu email](#)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+¡Gracias por visitar mi portafolio! 🚀
+
