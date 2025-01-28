@@ -57,20 +57,20 @@ Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
 
 ```text
 /
-├── public/
-│   └── assets/ (Imágenes y archivos estáticos)
+├── public/ (Imágenes y archivos estáticos)
 ├── src/
-│   ├── components/ (Componentes reutilizables)
+│   ├── components/ (Componentes reutilizables)│       
+|   |   ├── icons/ (Icons reutilizables)
+│   |   ├── Contact.astro (Sección de contacto/formulario)
+│   |   ├── Hero.astro (Sección principal de presentación)
+│   |   ├── About.astro (Sección de información sobre mí)
 │   ├── layouts/ (Plantillas de diseño)
 │   ├── pages/ (Páginas principales)
-│   ├── styles/ (Estilos personalizados)
-│   ├── data/
-│   │   ├── projects.js (Listado de proyectos)
-│   │   ├── tags.js (Etiquetas para clasificar tecnologías)
-│   │   ├── experience.js (Experiencia laboral)
-│   └── sections/
-│       ├── Hero.astro (Sección principal de presentación)
-│       ├── About.astro (Sección de información sobre mí)
+│   └── data/
+│       ├── projects.js (Listado de proyectos)
+│       ├── tags.js (Etiquetas para clasificar tecnologías)
+│       └── experience.js (Experiencia laboral)
+│
 └── package.json (Configuración del proyecto)
 ```
 
