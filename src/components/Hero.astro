@@ -1,0 +1,62 @@
+---
+import Badge from "./Badge.astro";
+import SocialStack from "./SocialStack.astro";
+
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import GithubIcon from "./icons/Github.astro";
+import GmailIcon from "./icons/Gmail.astro";
+---
+
+<img class="rounded-full size-12 mb-4" src="/me.png" alt="Mendev icon" />
+<h1
+  class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-x-2 pb-4 lg:pb-8 items-center"
+>
+  Hey, I'm <span class="color-animated">Mendev</span>
+  <div class="flex justify-center items-center">
+    <Badge class="text-xs sm:text-sm md:text-base">Available to work</Badge>
+  </div>
+</h1>
+<h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]">
+  <span class="text-white/80">Backend Developer and Systems Engineer</span>
+  <span class="text-violet-200/90"
+    >with +1 year of experience designing and implementing scalable web
+    solutions.
+  </span>
+  <span class="text-red-200/90">Based in Bogotá, Colombia.</span>
+  <span class="text-white/80"
+    >I specialize in creating efficient backend systems and optimizing
+    performance to deliver innovative digital products tailored to client needs.</span
+  >
+</h2>
+<nav class="flex gap-4 mt-8 flex-wrap">
+  <SocialStack href="https://www.linkedin.com/in/cmendoza02/">
+    <LinkedInIcon class="size-7" />
+  </SocialStack>
+  <SocialStack href="https://github.com/AndresMGdev">
+    <GithubIcon class="size-7" />
+  </SocialStack>
+  <SocialStack href="mailto:cmendoza022002@gmail.com">
+    <GmailIcon class="size-7" />
+  </SocialStack>
+</nav>
+<style>
+  @keyframes color-change {
+  0%, 100% {
+    color: rgba(221, 214, 254, 0.9); /* Violet */
+  }
+  25% {
+    color: rgba(254, 202, 202, 0.9); /* Red */
+  }
+  50% {
+    color: rgba(191, 219, 254, 0.9); /* Sky */
+  }
+  75% {
+    color: rgba(254, 240, 138, 0.9); /* Yellow */
+  }
+}
+
+.color-animated {
+  animation: color-change 3s infinite;
+}
+
+</style>
