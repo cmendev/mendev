@@ -90,9 +90,8 @@ Este proyecto está bajo la licencia **MIT**. Puedes usarlo, modificarlo y distr
 
 Si tienes preguntas, sugerencias o simplemente quieres conectar conmigo, puedes encontrarme en:
 
-- **LinkedIn**: [Tu perfil](#)
-- **Twitter**: [Tu usuario](#)
-- **Correo**: [Tu email](#)
+- **LinkedIn**: [Ir](https://www.linkedin.com/in/cmendoza02/)
+- **Correo**: [Ir](mailto:cmendoza022002@gmail.com)
 
 ---
 
