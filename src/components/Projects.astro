@@ -1,48 +1,18 @@
 ---
 import SocialStack from "../components/SocialStack.astro";
-import { TAGS } from '../data/tags';
+import { PROJECTS } from "../data/projects"
 
 import GithubIcon from "../components/icons/Github.astro";
 import DemoIcon from "../components/icons/Demo.astro";
-
-
-
-const PROJECTS = [
-  {
-    title: "Encrypt",
-    description:
-      "Creé el encriptador como un reto y una forma interactiva de aprendizaje. Este desafío me resultó apasionante, ya que lo integré con una de mis tecnologías favoritas: React.",
-    link: "https://andresmgdev.github.io/encrypt/",
-    github: "#", // Reemplázalo con el link al repositorio si está disponible
-    image: "/encrypt.png",
-    tags: [TAGS.JAVASCRIPT, TAGS.REACT, TAGS.CSS, TAGS.HTML],
-  },
-  {
-    title: "ProStock",
-    description:
-      "Desarrollado para la gestión de inventario, este proyecto incluye secciones clave como Inicio, Productos, Perfil, Iniciar sesión y Registrarse, facilitando una navegación fluida en la aplicación construida con Next.js v14 y estilizada con Tailwind CSS.",
-    link: "https://prostock.vercel.app/",
-    github: "#", // Reemplázalo con el link al repositorio si está disponible
-    image: "/prostock.png",
-    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS],
-  },
-  {
-    title: "Agriweigh",
-    description:
-      "Aplicación web para gestionar el peso del ganado, caballos y cerdos, permitiendo registrar y visualizar datos importantes como edad, código, longitud, circunferencia torácica y el calculo del peso estimado de las vacas, y descargar un informe pdf. Facilita tomar el peso sin bascula para los pequeños ganaderos.",
-    link: "https://agriweigh-latest.onrender.com/",
-    github: "#", // Reemplázalo con el link al repositorio si está disponible
-    image: "/agriweigh.png",
-    tags: [
-      TAGS.JAVA,
-      TAGS.SPRING,
-      TAGS.THYMELEAF,
-      TAGS.TAILWINDCSS,
-    ],
-  },
-];
 ---
-
+<style>
+  .text-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
 <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
   {
     PROJECTS.map((project) => (
@@ -55,7 +25,7 @@ const PROJECTS = [
           src={project.image}
           alt={`Screenshot project ${project.title}`}
         />
-        <p class="text-lg mb-4 text-pretty">{project.description}</p>
+        <p class="text-lg mb-4 text-pretty text-truncate">{project.description}</p>
         <ul class="flex gap-x-2 flex-row mb-2">
           {project.tags.map((tag) => (
             <li>
