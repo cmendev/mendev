@@ -14,7 +14,7 @@
   </div>
 </button>
 
-<script is:inline>
+<!-- <script is:inline>
   function toggleTheme() {
     const currentTheme = document.documentElement.classList.contains("dark")
       ? "dark"
@@ -46,4 +46,27 @@
     }
     window.localStorage.setItem("theme", theme);
   });
+</script> -->
+<script is:inline>
+  function applyTheme() {
+    const theme = localStorage.getItem("theme") || 
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "light" : "dark");
+  }
+
+  applyTheme();
+
+  document.addEventListener("astro:after-swap", applyTheme);
 </script>
+

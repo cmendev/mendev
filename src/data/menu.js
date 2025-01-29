@@ -5,18 +5,18 @@ export const MENU = [
   },
   {
     name: "Experience",
-    tag: "#experience",
+    tag: "/#experience",
   },
   {
     name: "Projects",
-    tag: "#projects",
+    tag: "/#projects",
   },
   {
     name: "About",
-    tag: "/about#about",
+    tag: "/about",
   },
   {
     name: "Contact",
-    tag: "/contact#contact",
+    tag: "/contact",
   },
 ];
