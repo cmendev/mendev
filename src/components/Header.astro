@@ -1,28 +1,8 @@
 ---
+import ThreeDots from "../components/icons/ThreeDots.astro";
+import ThemeIcon from "../components/icons/ThemeIcon.astro";
 
-
-export const MENU = [
-  {
-    name: "Home",
-    tag: "/",
-  },
-  {
-    name: "Experience",
-    tag: "#experience",
-  },
-  {
-    name: "Projects",
-    tag: "#projects",
-  },
-  {
-    name: "About",
-    tag: "/about",
-  },
-  {
-    name: "Contact",
-    tag: "/contact",
-  },
-];
+import { MENU } from "../data/menu";
 ---
 
 <nav
@@ -35,7 +15,7 @@ export const MENU = [
       id="menu"
       aria-label="toggle menu"
       type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg sm:hidden"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#1c0b2b]/80 dark:text-gray-500 rounded-lg sm:hidden"
     >
       <span class="sr-only">Open main menu</span>
       <svg
@@ -54,18 +34,18 @@ export const MENU = [
       </svg>
     </button>
     <div
-      class="hidden border border-white/5 rounded-lg w-full sm:block md:w-auto max-sm:backdrop-blur-lg z-50 max-sm:h-[30%] max-sm:w-[100%]"
+      class="hidden border border-[#1c0b2b]/5 dark:border-white/5 rounded-lg w-full sm:block md:w-auto max-sm:backdrop-blur-lg z-50 max-sm:h-[30%] max-sm:w-[100%]"
       id="menu-toggle"
     >
       <ul
-        class="font-medium flex flex-col sm:flex-row sm:justify-around items-center md:space-x-8 rtl:space-x-reverse max-sm:text-white"
+        class="font-medium flex flex-col sm:flex-row sm:justify-around items-center md:space-x-8 rtl:space-x-reverse text-[#1c0b2b] dark:text-white"
       >
         {
           MENU.map((menu) => (
             <li class="m-0">
               <a
                 href={menu.tag}
-                class="block py-2 px-3 hover:text-sky-200/90"
+                class="block py-2 px-3 hover:text-[#6f95ff]/90 dark:hover:text-sky-200/90"
                 aria-current="page"
               >
                 {menu.name}
@@ -73,7 +53,46 @@ export const MENU = [
             </li>
           ))
         }
+        <li>
+          <div class="dropdown relative inline-block">
+            <button
+              class="py-2 px-3 hover:text-[#6f95ff]/90 dark:hover:text-sky-200/90"
+              ><ThreeDots /></button
+            >
+            <div
+              class="dropdown-content absolute hidden bg-white dark:bg-neutral-950 shadow-lg min-w-[90px] z-10 rounded-lg top-full"
+            >
+              <div class="flex flex-col items-center py-3">
+                <ThemeIcon />
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+<style>
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+</style>
+<script>
+  document.getElementById("menu")?.addEventListener("click", () => {
+    document.getElementById("menu-toggle")?.classList.toggle("hidden");
+  });
+  window.addEventListener("scroll", () => {
+    // Obtener el elemento del menú-toggle
+    const menuToggle = document.getElementById("menu-toggle");
+
+    // Verificar si el menú está visible antes de cerrarlo
+    if (menuToggle && !menuToggle.classList.contains("hidden")) {
+      // Ocultar el menú-toggle
+      menuToggle.classList.add("hidden");
+    }
+  });
+</script>

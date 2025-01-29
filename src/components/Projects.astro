@@ -1,10 +1,11 @@
 ---
 import SocialStack from "../components/SocialStack.astro";
-import { PROJECTS } from "../data/projects"
+import { PROJECTS } from "../data/projects";
 
 import GithubIcon from "../components/icons/Github.astro";
 import DemoIcon from "../components/icons/Demo.astro";
 ---
+
 <style>
   .text-truncate {
     display: -webkit-box;
@@ -16,28 +17,28 @@ import DemoIcon from "../components/icons/Demo.astro";
 <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
   {
     PROJECTS.map((project) => (
-      <article class="border border-white/10 p-4 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+      <article class="border border-[#1c0b2b]/10 dark:border-white/10 p-4 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold text-orange-400 dark:text-yellow-200 mb-2">
           {project.title}
         </h3>
         <img
-          class="rounded shadow-white/10"
+          class="rounded shadow-[#1c0b2b]/10 dark:shadow-white/10"
           src={project.image}
           alt={`Screenshot project ${project.title}`}
         />
-        <p class="text-lg mb-4 text-pretty text-truncate">{project.description}</p>
+        <p class="text-lg mb-4 text-pretty text-truncate text-[#1c0b2b]/90 dark:text-gray-200">
+          {project.description}
+        </p>
         <ul class="flex gap-x-2 flex-row mb-2">
           {project.tags.map((tag) => (
             <li>
-              <span
-                class={`rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 bg-white/5 hover:scale-110 hover:bg-white/30 text-xs md:text-base transition ${tag.class}`}
-              >
+              <SocialStack>
                 <tag.icon class="size-7" />
-              </span>
+              </SocialStack>
             </li>
           ))}
         </ul>
-        <div class="flex gap-4">
+        <div class="flex gap-x-2">
           <SocialStack href={project.github}>
             <GithubIcon class="size-7" />
           </SocialStack>

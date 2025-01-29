@@ -64,6 +64,6 @@ export const TAGS = {
   GIT: {
     name: "Git",
     class: "text-red-500/80 bg-white",
-    icon: Git, 
+    icon: Git,
   },
 };
