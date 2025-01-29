@@ -81,18 +81,64 @@ import { MENU } from "../data/menu";
     display: block;
   }
 </style>
-<script>
-  document.getElementById("menu")?.addEventListener("click", () => {
-    document.getElementById("menu-toggle")?.classList.toggle("hidden");
-  });
-  window.addEventListener("scroll", () => {
-    // Obtener el elemento del menú-toggle
+<script is:inline>
+  function applyMenuState() {
     const menuToggle = document.getElementById("menu-toggle");
+    if (!menuToggle) return;
 
-    // Verificar si el menú está visible antes de cerrarlo
-    if (menuToggle && !menuToggle.classList.contains("hidden")) {
-      // Ocultar el menú-toggle
+    const isMenuOpen = localStorage.getItem("menuOpen") === "true";
+    if (isMenuOpen) {
+      menuToggle.classList.remove("hidden");
+    } else {
       menuToggle.classList.add("hidden");
     }
+  }
+
+  function toggleMenu() {
+    const menuToggle = document.getElementById("menu-toggle");
+    if (!menuToggle) return;
+
+    const isCurrentlyOpen = !menuToggle.classList.contains("hidden");
+    menuToggle.classList.toggle("hidden");
+
+    // Guardar estado en localStorage
+    localStorage.setItem("menuOpen", (!isCurrentlyOpen).toString());
+  }
+
+  function closeMenu() {
+    const menuToggle = document.getElementById("menu-toggle");
+    if (menuToggle && !menuToggle.classList.contains("hidden")) {
+      menuToggle.classList.add("hidden");
+      localStorage.setItem("menuOpen", "false");
+    }
+  }
+
+  // Asegurar que el evento click se asigne después de un cambio de página
+  function attachMenuEvent() {
+    const menuButton = document.getElementById("menu");
+    if (menuButton) {
+      menuButton.removeEventListener("click", toggleMenu); // Evitar múltiples bindings
+      menuButton.addEventListener("click", toggleMenu);
+    }
+
+    // Cerrar el menú solo al hacer clic en enlaces que redirigen
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (event) => {
+        if (link.href && link.href !== window.location.href) {
+          closeMenu();
+        }
+      });
+    });
+  }
+
+  // Aplicar estado y eventos al cargar y después de un cambio de página
+  document.addEventListener("astro:after-swap", () => {
+    applyMenuState();
+    attachMenuEvent();
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    applyMenuState();
+    attachMenuEvent();
   });
 </script>
