@@ -2,7 +2,7 @@
 
 Bienvenido al repositorio de **Mendev**, mi portafolio profesional desarrollado con **Astro**. Este proyecto presenta mis habilidades, experiencia y proyectos destacados en un diseño moderno y eficiente.
 
-![just-the-basics](public/image.png)
+![just-the-basics](public/image.webp)
 
 ## 🌟 Características
 
