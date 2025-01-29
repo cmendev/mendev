@@ -20,12 +20,10 @@ const { link, description, image, github, tags } = project;
     <a href="javascript:history.back()" class="py-2 underline text-white cursor-pointer">
       Back
     </a>
-    <!-- Título del proyecto -->
     <h1 transition:name={title} class=" text-orange-400 dark:text-yellow-200 text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
       {title}
     </h1>
 
-    <!-- Imagen del proyecto -->
     <div class="mb-8">
       <img transition:name={`img-${title}`}
         class="w-full h-auto rounded-lg shadow-lg"
@@ -34,12 +32,10 @@ const { link, description, image, github, tags } = project;
       />
     </div>
 
-    <!-- Descripción del proyecto -->
     <p class="text-lg sm:text-xl text-[#413b6b] dark:text-gray-300 mb-8">
       {description}
     </p>
 
-    <!-- Enlaces -->
     <div class="flex flex-col sm:flex-row gap-4 mb-8">
         <SocialStack href={github}>
           <GithubIcon class="size-7" />
@@ -49,7 +45,6 @@ const { link, description, image, github, tags } = project;
         </SocialStack>
     </div>
 
-    <!-- Etiquetas del proyecto -->
     <div class="flex flex-wrap gap-4">
       {tags.map((tag) => (
         <SocialStack>
