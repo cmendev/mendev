@@ -4,7 +4,7 @@ import { PROJECTS } from "../data/projects";
 
 import GithubIcon from "../components/icons/Github.astro";
 import DemoIcon from "../components/icons/Demo.astro";
-import { slide } from 'astro:transitions';
+import ArrowPage from "./icons/ArrowPage.astro";
 ---
 
 <style>
@@ -19,8 +19,8 @@ import { slide } from 'astro:transitions';
   {
     PROJECTS.map((project) => (
       <article class="border border-[#1c0b2b]/10 dark:border-white/10 p-4 rounded-lg shadow-lg">
-        <a transition:name={project.title} href={`/projects/${project.title}`} class="text-2xl font-semibold text-orange-400 dark:text-yellow-200 mb-2">
-          {project.title}
+        <a transition:name={project.title} href={`/projects/${project.title}`} class="flex items-center text-2xl font-semibold text-orange-400 dark:text-yellow-200 mb-2">
+          {project.title} <ArrowPage class="size-7" />
         </a>
         <img transition:name={`img-${project.title}`}
           class="rounded shadow-[#1c0b2b]/10 dark:shadow-white/10"
