@@ -11,7 +11,12 @@ import GmailIcon from "./icons/Gmail.astro";
 <h1
   class="text-[#1c0b2b] dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-x-2 pb-4 lg:pb-8 items-center"
 >
-  Hey, I'm <span class="color-animated">Mendev</span>
+  Hey, I'm <div class="relative group">
+    <span class="color-animated">Mendev</span>
+    <div class="absolute left-1/2 transform -translate-x-1/2 mt-0 min-w-max p-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <p class="whitespace-nowrap">Carlos Mendoza</p>
+  </div>
+  </div>
   <div class="flex justify-center items-center">
     <Badge class="text-xs sm:text-sm md:text-base">Available to work</Badge>
   </div>
