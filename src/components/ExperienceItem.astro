@@ -5,10 +5,18 @@ interface Props {
   company: string;
   description: string;
   link?: string;
+  id?: string;
 }
-const { date, title, company, description, link } = Astro.props;
+const { date, title, company, description, link, id } = Astro.props;
 ---
-
+<style>
+  .text-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
 <time
   class="mb-1 text-sm font-normal leading-none text-[#6f95ff]/90 dark:text-sky-200/90"
   >{date}</time
@@ -19,7 +27,7 @@ const { date, title, company, description, link } = Astro.props;
   </h3>
 </div>
 <p
-  class="mb-4 text-base font-normal text-[#1c0b2b]/90 dark:text-gray-200 text-pretty"
+  class="mb-4 text-base font-normal text-truncate text-[#1c0b2b]/90 dark:text-gray-200 text-pretty"
 >
   {description}
 </p>
@@ -27,7 +35,7 @@ const { date, title, company, description, link } = Astro.props;
 {
   link && (
     <a
-      href={link}
+      href={`/experience/${id}`}
       class="inline-flex items-center font-medium text-[#1c0b2b]/90 dark:text-white bg-[#1c0b2b]/5  rounded-full border border-[#1c0b2b]/10 dark:border-white/10  gap-x-2 py-1 px-2 md:py-2 md:px-4 dark:bg-white/5 hover:bg-[#1c0b2b]/30 dark:hover:bg-white/30 text-xs md:text-base hover:scale-110 transition"
     >
       Learn more...{" "}
