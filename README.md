@@ -82,6 +82,12 @@ Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
 - **Markdown** - Creación de contenido estático
 - **Formspree** - Manejo de formularios de contacto
 
+## 🌟 Agradecimientos
+
+Los íconos SVG utilizados en este proyecto provienen en un **90%** del proyecto [SVGL](https://svgl.app/) perteneciente a [Pheralb](https://github.com/pheralb).
+
+Mi portafolio está inspirado en el diseño de [Miguel Ángel Durán (midudev)](https://github.com/midudev/), en especial en su video de creación de portafolios: [¡Crea tu portafolio con Astro y Tailwind!](https://www.youtube.com/watch?v=HEMvsJTBweY). 
+
 ## 📜 Licencia
 
 Este proyecto está bajo la licencia **MIT**. Puedes usarlo, modificarlo y distribuirlo libremente.
@@ -96,4 +102,3 @@ Si tienes preguntas, sugerencias o simplemente quieres conectar conmigo, puedes 
 ---
 
 ¡Gracias por visitar mi portafolio! 🚀
-
