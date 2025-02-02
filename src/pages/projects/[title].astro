@@ -6,6 +6,7 @@ import DemoIcon from "../../components/icons/Demo.astro";
 
 import { PROJECTS } from "../../data/projects";
 import Layout from "../../layouts/Layout.astro";
+import ArrowBack from "../../components/icons/ArrowBack.astro";
 
 const { title } = Astro.params;
 const project = PROJECTS.find((project) => project.title === title);
@@ -17,8 +18,8 @@ const { link, description, image, github, tags } = project;
 
 <Layout title={`Mendev Portfolio - ${title}`}>
   <SectionContainer class="py-24">
-    <a href="javascript:history.back()" class="py-2 underline text-[#413b6b] dark:text-white cursor-pointer">
-      ← Back
+    <a href="javascript:history.back()" class="flex items-center py-2 underline text-[#413b6b] dark:text-white cursor-pointer">
+      <ArrowBack class="size-4" /> Back
     </a>
     <h1 transition:name={title} class="text-orange-400 dark:text-yellow-200 text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
       {title}

@@ -4,10 +4,11 @@ import ExperienceItem from "./ExperienceItem.astro";
 import { EXPERIENCE } from "../data/experience";
 ---
 
-<ul class="border-s border-[#1c0b2b]/20 dark:border-gray-200 ml-3.5">
+<ul class="relative border-s border-[#1c0b2b]/20 dark:border-gray-200 ml-3.5">
   {
     EXPERIENCE.map((experience) => (
       <li class="mb-10 ms-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="absolute size-4 text-[#1c0b2b]/20 dark:text-gray-200 mt-3.5 -start-[2px]" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M400 352l64-64-64-64"/><path d="M448 288H154c-58.76 0-106-49.33-106-108v-20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
         <ExperienceItem {...experience} />
       </li>
     ))
