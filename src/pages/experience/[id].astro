@@ -1,0 +1,46 @@
+---
+import SectionContainer from "../../components/Section.astro";
+import SocialStack from "../../components/SocialStack.astro";
+import GithubIcon from "../../components/icons/Github.astro";
+import DemoIcon from "../../components/icons/Demo.astro";
+import Layout from "../../layouts/Layout.astro";
+import { EXPERIENCE } from "../../data/experience";
+
+const { id } = Astro.params;
+const experience = EXPERIENCE.find((xp) => xp.id === id);
+
+if (!experience) {
+  return Astro.redirect("/404");
+}
+
+const { date, title, company, description, link, tags } = experience;
+---
+
+<Layout title={`Mendev Portfolio - ${title}`}>
+  <SectionContainer class="py-24">
+    <a
+      href="javascript:history.back()"
+      class="py-2 underline text-blue-600 dark:text-yellow-300 hover:text-blue-800 dark:hover:text-yellow-400 transition duration-200"
+      aria-label="Go back"
+    >
+      ← Back
+    </a>
+
+    <h1 class="text-orange-400 dark:text-yellow-200 text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
+      {title}
+    </h1>
+    <h2 class="text-lg text-gray-500 dark:text-gray-400 mb-6">{company} | {date}</h2>
+
+    <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+      {description}
+    </p>
+
+    <div class="flex flex-wrap gap-4">
+      {tags.map((tag) => (
+        <SocialStack>
+          <tag.icon class="size-7" />
+        </SocialStack>
+      ))}
+    </div>
+  </SectionContainer>
+</Layout>
