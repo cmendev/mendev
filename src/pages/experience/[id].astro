@@ -20,18 +20,18 @@ const { date, title, company, description, link, tags } = experience;
   <SectionContainer class="py-24">
     <a
       href="javascript:history.back()"
-      class="py-2 underline text-blue-600 dark:text-yellow-300 hover:text-blue-800 dark:hover:text-yellow-400 transition duration-200"
+      class="py-2 underline text-[#413b6b] dark:text-white cursor-pointer"
       aria-label="Go back"
     >
       ← Back
     </a>
 
-    <h1 class="text-orange-400 dark:text-yellow-200 text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
+    <h1 transition:name={id} class="text-orange-400 dark:text-yellow-200 text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
       {title}
     </h1>
-    <h2 class="text-lg text-gray-500 dark:text-gray-400 mb-6">{company} | {date}</h2>
+    <h2 transition:name={company} class="text-lg text-gray-500 dark:text-gray-400 mb-6">{company} | {date}</h2>
 
-    <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+    <p transition:name={description} class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
       {description}
     </p>
 

@@ -23,7 +23,6 @@ import Docker from "../components/icons/technologies/Docker.astro";
 import PostgreSQL from "../components/icons/technologies/PostgreSQL.astro";
 
 export const TAGS = {
-  // 📦 Lenguajes y Superconjuntos
   JAVASCRIPT: {
     name: "JavaScript",
     class: "from-yellow-500/80 to-white dark:to-neutral-950",
@@ -34,8 +33,6 @@ export const TAGS = {
     class: "from-blue-600/80 to-white dark:to-neutral-950",
     icon: TypeScript,
   },
-
-  // ⚡ Frameworks y Librerías basados en JS/TS
   REACT: {
     name: "React",
     class: "from-blue-500/80 to-white dark:to-neutral-950",
@@ -46,8 +43,6 @@ export const TAGS = {
     class: "from-black/80 to-white dark:to-neutral-950",
     icon: Nextjs,
   },
-
-  // 🌐 Lenguajes de Marcado y Estilo
   HTML: {
     name: "HTML",
     class: "from-orange-500/80 to-white dark:to-neutral-950",
@@ -63,20 +58,11 @@ export const TAGS = {
     class: "from-teal-500/80 to-white dark:to-neutral-950",
     icon: TailwindCSS,
   },
-
-  // 📦 Otros Lenguajes
   JAVA: {
     name: "Java",
     class: "from-orange-500/80 to-white dark:to-neutral-950",
     icon: Java,
   },
-  PLSQL: {
-    name: "PL/SQL",
-    class: "from-yellow-500/80 to-white dark:to-neutral-950",
-    icon: PLSQL,
-  },
-
-  // ⚡ Frameworks relacionados con Java
   SPRING: {
     name: "Spring",
     class: "from-[#6cb43c] to-white dark:to-neutral-950",
@@ -87,20 +73,21 @@ export const TAGS = {
     class: "from-green-500/80 to-white dark:to-neutral-950",
     icon: Thymeleaf,
   },
-
-  // ⚡ Frameworks de Backend
   LARAVEL: {
     name: "Laravel",
     class: "from-red-500/80 to-white dark:to-neutral-950",
     icon: Laravel,
+  },
+  PLSQL: {
+    name: "PL/SQL",
+    class: "from-yellow-500/80 to-white dark:to-neutral-950",
+    icon: PLSQL,
   },
   APEX: {
     name: "Apex",
     class: "from-purple-500/80 to-white dark:to-neutral-950",
     icon: Apex,
   },
-
-  // 🛠️ Herramientas y Control de Versiones
   GIT: {
     name: "Git",
     class: "from-red-500/80 to-white dark:to-neutral-950",
