@@ -44,6 +44,6 @@ export const PROJECTS = [
     link: "https://weathercity-xi.vercel.app/",
     github: "https://github.com/cmendev/weather",
     image: "/weathercity.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS],
+    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS, TAGS.ZOD],
   },
 ];

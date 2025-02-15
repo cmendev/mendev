@@ -16,6 +16,7 @@ import Thymeleaf from "../components/icons/technologies/Thymeleaf.astro";
 import Laravel from "../components/icons/technologies/Laravel.astro";
 import Apex from "../components/icons/technologies/Apex.astro";
 import TailwindCSS from "../components/icons/technologies/TailwindCSS.astro";
+import Zod from "../components/icons/technologies/Zod.astro";
 
 // 🛠️ Herramientas y Control de Versiones
 import Git from "../components/icons/technologies/Git.astro";
@@ -42,6 +43,11 @@ export const TAGS = {
     name: "Nextjs",
     class: "from-black/80 to-white dark:to-neutral-950",
     icon: Nextjs,
+  },
+  ZOD: {
+    name: "Zod",
+    class: "from-blue-500/80 to-white dark:to-neutral-950",
+    icon: Zod,
   },
   HTML: {
     name: "HTML",
