@@ -1,8 +1,6 @@
 ---
 import SectionContainer from "../../components/Section.astro";
 import SocialStack from "../../components/SocialStack.astro";
-import GithubIcon from "../../components/icons/Github.astro";
-import DemoIcon from "../../components/icons/Demo.astro";
 import Layout from "../../layouts/Layout.astro";
 import { EXPERIENCE } from "../../data/experience";
 import ArrowBack from "../../components/icons/ArrowBack.astro";
@@ -14,7 +12,7 @@ if (!experience) {
   return Astro.redirect("/404");
 }
 
-const { date, title, company, description, link, tags } = experience;
+const { date, title, company, description, tags } = experience;
 ---
 
 <Layout title={`Mendev Portfolio - ${title}`}>
