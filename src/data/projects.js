@@ -15,7 +15,7 @@ export const PROJECTS = [
     description:
       "Developed for inventory management, this project includes key sections such as Home, Products, Profile, Login, and Register, ensuring smooth navigation within the application built with Next.js v14 and styled with Tailwind CSS.",
     link: "https://prostock.vercel.app/",
-    github: "#", // Replace with the repository link if available
+    github: "https://github.com/cmendev/mockups-app",
     image: "/prostock.webp",
     tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS],
   },
