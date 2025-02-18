@@ -36,7 +36,7 @@ export const TAGS = {
   },
   REACT: {
     name: "React",
-    class: "from-blue-500/80 to-white dark:to-neutral-950",
+    class: "from-[#08dcfc] to-white dark:to-neutral-950",
     icon: React,
   },
   NEXTJS: {
