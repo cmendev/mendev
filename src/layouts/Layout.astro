@@ -53,6 +53,38 @@ const { description, title } = Astro.props;
     flex-direction: column;
     min-height: 100vh;
   }
+
+ /* Scrollbar para navegadores basados en WebKit (Chrome, Safari, Edge Chromium) */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+@supports (scrollbar-gutter: stable) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Hace que el fondo del track sea transparente */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(251, 146, 60); /* Color de la barra de desplazamiento */
+  border-radius: 6px; /* Esquinas redondeadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(251, 146, 60, 0.8); /* Color ligeramente más oscuro al pasar el mouse */
+}
+
+/* Scrollbar para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(251, 146, 60) transparent;
+}
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
