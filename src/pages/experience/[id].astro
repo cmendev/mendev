@@ -13,14 +13,34 @@ if (!experience) {
 }
 
 const { date, title, company, description, tags } = experience;
+const pageTitle = `${title} en ${company} - Experiencia | Mendev Portfolio`;
+const metaDescription = `Conoce más sobre mi experiencia en ${title} en ${company}. Descubre los detalles y tecnologías que utilicé en este proyecto.`;
 ---
 
-<Layout title={`Mendev Portfolio - ${title}`}>
+<Layout title={pageTitle}>
+  <head>
+    <meta name="description" content={metaDescription} />
+    <meta name="keywords" content={`portafolio, experiencia, ${company}, ${title}, desarrollo web, tecnologías`} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://tuweb.com/experiencia/${id}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+  </head>
+
   <SectionContainer class="py-24">
-    <h1 transition:name={id} class="text-orange-400 dark:text-yellow-200 text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
+    <a href="/" class="text-blue-500 hover:underline flex items-center mb-4">
+      <ArrowBack class="size-5 mr-2" /> Back to home
+    </a>
+
+    <h1 transition:name={title} class="text-orange-400 dark:text-yellow-200 text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
       {title}
     </h1>
-    <h2 transition:name={company} class="text-lg text-gray-500 dark:text-gray-400 mb-6">{company} | {date}</h2>
+    <h2 transition:name={company} class="text-lg text-gray-500 dark:text-gray-400 mb-6">
+      {company} | {date}
+    </h2>
 
     <p transition:name={description} class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
       {description}
@@ -28,8 +48,8 @@ const { date, title, company, description, tags } = experience;
 
     <div class="flex flex-wrap gap-4">
       {tags.map((tag) => (
-        <SocialStack>
-          <tag.icon class="size-7" />
+        <SocialStack transition:name={tag.name} key={tag.name}>
+          <tag.icon class="size-7" alt={`Ícono de ${tag.name}`} />
         </SocialStack>
       ))}
     </div>
