@@ -7,18 +7,23 @@ import GithubIcon from "./icons/Github.astro";
 import GmailIcon from "./icons/Gmail.astro";
 ---
 
-<!-- <img class="rounded-full size-12 mb-4" src="/me.webp" alt="Mendev icon" /> -->
 <div class="rounded-full size-12 mb-4 overflow-hidden">
-  <img src="/me.webp" alt="Mendev icon" class="w-full h-full object-cover" />
+  <img
+    src="/me.webp"
+    alt="Icono de Mendev"
+    class="w-full h-full object-cover"
+  />
 </div>
 <h1
   class="text-[#1c0b2b] dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-x-2 pb-4 lg:pb-8 items-center"
 >
-  Hey, I'm <div class="relative group">
+  Hola, soy <div class="relative group">
     <span class="color-animated">Mendev</span>
-    <div class="absolute left-1/2 transform -translate-x-1/2 mt-0 min-w-max p-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div
+      class="absolute left-1/2 transform -translate-x-1/2 mt-0 min-w-max p-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    >
       <p class="whitespace-nowrap">Carlos Mendoza</p>
-  </div>
+    </div>
   </div>
   <div class="flex justify-center items-center">
     <Badge class="text-xs sm:text-sm md:text-base">Available to work</Badge>
@@ -26,28 +31,33 @@ import GmailIcon from "./icons/Gmail.astro";
 </h1>
 <h2 class="text-xl lg:text-2xl text-pretty max-w-[700px]">
   <span class="text-[#1c0b2b]/80 dark:text-white/80"
-    >Software Developer and Systems Engineer</span
+    >Desarrollador de Software e Ingeniero de Sistemas</span
   >
   <span class="text-[#413b6b]/90 dark:text-violet-200/90"
-    >with +1 year of experience designing and implementing scalable web
-    solutions.
-  </span>
+    >con más de 1 año de experiencia diseñando e implementando soluciones web
+    escalables.</span
+  >
   <span class="text-[#5c65c0]/90 dark:text-red-200/90"
-    >Based in Bogotá, Colombia.</span
+    >Ubicado en Bogotá, Colombia.</span
   >
   <span class="text-[#1c0b2b]/80 dark:text-white/80"
-    >I specialize in creating efficient backend systems and optimizing
-    performance to deliver innovative digital products tailored to client needs.</span
+    >Especializado en la creación de sistemas eficientes y optimización de
+    rendimiento para ofrecer productos digitales innovadores adaptados a las
+    necesidades del cliente.</span
   >
 </h2>
+
 <nav class="flex gap-4 mt-8 flex-wrap">
-  <SocialStack href="https://www.linkedin.com/in/mendev/" aria-label="LinkedIn Profile"> 
+  <SocialStack
+    href="https://www.linkedin.com/in/mendev/"
+    aria-label="LinkedIn Profile"
+  >
     <LinkedInIcon class="size-7" />
   </SocialStack>
-  <SocialStack href="https://github.com/cmendev" aria-label="Github Profile"> 
+  <SocialStack href="https://github.com/cmendev" aria-label="Github Profile">
     <GithubIcon class="size-7" />
   </SocialStack>
-  <SocialStack href="mailto:cmendoza022002@gmail.com" aria-label="Email Mendev"> 
+  <SocialStack href="mailto:cmendoza022002@gmail.com" aria-label="Email Mendev">
     <GmailIcon class="size-7" />
   </SocialStack>
 </nav>

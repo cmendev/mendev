@@ -4,21 +4,41 @@ export const PROJECTS = [
   {
     title: "Encrypt",
     description:
-      "I created the encryptor as a challenge and an interactive way of learning. This challenge was exciting for me because I integrated it with one of my favorite technologies: React.",
+      "Creé el encriptador como un desafío y una forma interactiva de aprendizaje. Este reto fue emocionante para mí porque lo integré con una de mis tecnologías favoritas: React.",
     link: "https://andresmgdev.github.io/encrypt/",
-    github: "#", // Replace with the repository link if available
+    github: "#", // Reemplazar con el enlace del repositorio si está disponible
     image: "/encrypt.webp",
     tags: [TAGS.JAVASCRIPT, TAGS.REACT, TAGS.CSS, TAGS.HTML],
   },
   {
     title: "ProStock",
     description:
-      "Developed for inventory management, this project includes key sections such as Home, Products, Profile, Login, and Register, ensuring smooth navigation within the application built with Next.js v14 and styled with Tailwind CSS.",
+      "Desarrollado para la gestión de inventarios, este proyecto incluye secciones clave como Inicio, Productos, Perfil, Inicio de sesión y Registro, garantizando una navegación fluida dentro de la aplicación construida con Next.js v14 y estilizada con Tailwind CSS.",
     link: "https://prostock.vercel.app/",
     github: "https://github.com/cmendev/mockups-app",
     image: "/prostock.webp",
     tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS],
   },
+  {
+    title: "ImageTools",
+    description:
+      "ImageTools es una aplicación web potente y fácil de usar para editar imágenes directamente en el navegador. Permite recortar, redimensionar, convertir formatos de imagen y optimizar imágenes de manera eficiente sin necesidad de instalar software complejo. Construida con Next.js, TypeScript y Tailwind CSS, garantiza una experiencia fluida y responsiva. La aplicación es ideal para diseñadores, desarrolladores y cualquier persona que necesite un procesamiento rápido de imágenes. También ofrece vistas previas en tiempo real y una interfaz intuitiva para una interacción sin complicaciones.",
+    link: "https://image-tools-psi.vercel.app/",
+    github: "https://github.com/cmendev/frameit-image",
+    image: "/imagetools.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS],
+  },
+  {
+    title: "WeatherCity",
+    description:
+      "WeatherCity es una aplicación de clima en tiempo real que proporciona información meteorológica actualizada de ciudades en todo el mundo. Se integra con la API de OpenWeatherMap para obtener pronósticos precisos, tendencias de temperatura, niveles de humedad y más. La aplicación cuenta con una interfaz intuitiva construida con Next.js y Tailwind CSS, asegurando un diseño limpio y responsivo. Los usuarios pueden buscar cualquier ciudad y recibir actualizaciones instantáneas del clima con información detallada, incluido un pronóstico de 7 días. Ideal para viajeros, entusiastas del aire libre y cualquier persona que desee estar informada sobre las condiciones meteorológicas.",
+    link: "https://weathercity-xi.vercel.app/",
+    github: "https://github.com/cmendev/weather",
+    image: "/weathercity.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS, TAGS.ZOD],
+  },
+];
+
   // {
   //   title: "Agriweigh",
   //   description:
@@ -28,22 +48,3 @@ export const PROJECTS = [
   //   image: "/agriweigh.webp",
   //   tags: [TAGS.JAVA, TAGS.SPRING, TAGS.THYMELEAF, TAGS.TAILWINDCSS],
   // },
-  {
-    title: "ImageTools",
-    description:
-      "ImageTools is a powerful and easy-to-use web application for editing images directly in the browser. It allows users to crop, resize, convert image formats, and optimize their images efficiently without the need for complex software installations. Built with Next.js, TypeScript, and Tailwind CSS, it ensures a smooth and responsive experience. The app is ideal for designers, developers, and anyone who needs quick image processing. It also provides real-time previews and a user-friendly interface for seamless interaction.",
-    link: "https://image-tools-psi.vercel.app/",
-    github: "https://github.com/cmendev/frameit-image",
-    image: "/imagetools.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS],
-  },
-  {
-    title: "WeatherCity",
-    description:
-      "WeatherCity is a real-time weather application that provides up-to-date weather information for cities worldwide. It integrates with the OpenWeatherMap API to fetch accurate forecasts, temperature trends, humidity levels, and more. The app features an intuitive user interface built with Next.js and Tailwind CSS, ensuring a clean and responsive design. Users can search for any city and get instant weather updates with detailed information, including a 7-day forecast. Perfect for travelers, outdoor enthusiasts, and anyone who wants to stay informed about weather conditions.",
-    link: "https://weathercity-xi.vercel.app/",
-    github: "https://github.com/cmendev/weather",
-    image: "/weathercity.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.NEXTJS, TAGS.TAILWINDCSS, TAGS.ZOD],
-  },
-];

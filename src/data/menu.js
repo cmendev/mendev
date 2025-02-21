@@ -1,22 +1,22 @@
 export const MENU = [
   {
-    name: "Home",
+    name: "Inicio",
     tag: "/",
   },
   {
-    name: "Experience",
+    name: "Experiencia",
     tag: "/#experience",
   },
   {
-    name: "Projects",
+    name: "Proyectos",
     tag: "/#projects",
   },
   {
-    name: "About",
+    name: "Sobre mí",
     tag: "/about",
   },
   {
-    name: "Contact",
+    name: "Contacto",
     tag: "/contact",
   },
 ];
