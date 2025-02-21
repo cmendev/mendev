@@ -40,10 +40,10 @@ import ArrowPage from "./icons/ArrowPage.astro";
           ))}
         </ul>
         <div class="flex gap-x-2">
-          <SocialStack href={project.github}>
+          <SocialStack href={project.github} aria-label={`Code ${project.title} on Github`}>
             <GithubIcon class="size-7" />
           </SocialStack>
-          <SocialStack href={project.link}>
+          <SocialStack href={project.link} aria-label={`Demo ${project.title}`}>
             <DemoIcon class="size-7" />
           </SocialStack>
         </div>
