@@ -33,9 +33,9 @@ import ArrowPage from "./icons/ArrowPage.astro";
         <ul class="flex gap-x-2 flex-row mb-2">
           {project.tags.map((tag) => (
             <li>
-              <SocialStack>
+              <div class="rounded-full border border-[#1c0b2b]/10 dark:border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 bg-[#6f95ff]/5 dark:bg-white/5 hover:scale-110 hover:bg-white/30 text-xs md:text-base transition">
                 <tag.icon class="size-7" />
-              </SocialStack>
+              </div>
             </li>
           ))}
         </ul>
